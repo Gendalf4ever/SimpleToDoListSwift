@@ -11,10 +11,14 @@ import Foundation
 
 var ToDoItems: [[String: Any]] = [["Name" : "bebe", "isCompleted": false], ["Name" : "baba", "isCompleted": false], ["Name" : "bubu", "isCompleted": false]]
 func addItem(itemName:String, isCompleted: Bool = false){
-    ToDoItems.append(["Name": itemName, "isComleted": false])
+    ToDoItems.append(["Name": itemName, "isCompleted": false])
     saveData()
 }
-
+func changeState (at item: Int) -> Bool{
+    ToDoItems[item]["isCompleted"] =  !(ToDoItems[item]["isCompleted"] as! Bool)
+    saveData()
+    return  ToDoItems[item]["isCompleted"] as! Bool
+}
 func removeItem(at index: Int) {
     ToDoItems.remove(at: index)
     saveData()
