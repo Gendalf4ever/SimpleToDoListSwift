@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF44341926D7C58B00000037 /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44341826D7C58B00000037 /* TableTableViewController.swift */; };
+		AF44341E26D7C5E400000037 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44341D26D7C5E400000037 /* Model.swift */; };
 		AFEE7139257E643B009B186D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7138257E643B009B186D /* AppDelegate.swift */; };
 		AFEE713B257E643B009B186D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE713A257E643B009B186D /* SceneDelegate.swift */; };
-		AFEE713D257E643B009B186D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE713C257E643B009B186D /* ViewController.swift */; };
 		AFEE7140257E643B009B186D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEE713E257E643B009B186D /* Main.storyboard */; };
 		AFEE7143257E643B009B186D /* ToDOList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7141257E643B009B186D /* ToDOList.xcdatamodeld */; };
 		AFEE7145257E643D009B186D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7144257E643D009B186D /* Assets.xcassets */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF44341826D7C58B00000037 /* TableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTableViewController.swift; sourceTree = "<group>"; };
+		AF44341D26D7C5E400000037 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		AFEE7135257E643B009B186D /* ToDOList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDOList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEE7138257E643B009B186D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEE713A257E643B009B186D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AFEE713C257E643B009B186D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFEE713F257E643B009B186D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFEE7142257E643B009B186D /* ToDOList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDOList.xcdatamodel; sourceTree = "<group>"; };
 		AFEE7144257E643D009B186D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,12 +105,13 @@
 			children = (
 				AFEE7138257E643B009B186D /* AppDelegate.swift */,
 				AFEE713A257E643B009B186D /* SceneDelegate.swift */,
-				AFEE713C257E643B009B186D /* ViewController.swift */,
 				AFEE713E257E643B009B186D /* Main.storyboard */,
 				AFEE7144257E643D009B186D /* Assets.xcassets */,
 				AFEE7146257E643D009B186D /* LaunchScreen.storyboard */,
 				AFEE7149257E643D009B186D /* Info.plist */,
 				AFEE7141257E643B009B186D /* ToDOList.xcdatamodeld */,
+				AF44341826D7C58B00000037 /* TableTableViewController.swift */,
+				AF44341D26D7C5E400000037 /* Model.swift */,
 			);
 			path = ToDOList;
 			sourceTree = "<group>";
@@ -262,7 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEE713D257E643B009B186D /* ViewController.swift in Sources */,
+				AF44341E26D7C5E400000037 /* Model.swift in Sources */,
+				AF44341926D7C58B00000037 /* TableTableViewController.swift in Sources */,
 				AFEE7139257E643B009B186D /* AppDelegate.swift in Sources */,
 				AFEE713B257E643B009B186D /* SceneDelegate.swift in Sources */,
 				AFEE7143257E643B009B186D /* ToDOList.xcdatamodeld in Sources */,
