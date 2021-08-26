@@ -23,6 +23,14 @@ var ToDoItems: [[String: Any]] {
         }
     }
 }
+
+func moveItem(fromIndex: Int, toIndex: Int) {
+    let from = ToDoItems[fromIndex]
+    ToDoItems.remove(at: fromIndex)
+    ToDoItems.insert(from, at: toIndex)
+
+}
+
 func addItem(itemName:String, isCompleted: Bool = false){
     ToDoItems.append(["Name": itemName, "isCompleted": false])
   

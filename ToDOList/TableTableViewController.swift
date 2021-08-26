@@ -23,7 +23,7 @@ class TableTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     @IBAction func pushEditAction(_ sender: Any) {
-        tableView.setEditing(true, animated: true)
+        tableView.setEditing(!tableView.isEditing, animated: true)
     }
     @IBAction func pushAddAction(_ sender: Any) {
         let alertController = UIAlertController(title: "Create new task", message: nil, preferredStyle: .alert)
@@ -103,7 +103,7 @@ class TableTableViewController: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        moveItem(fromIndex: fromIndexPath.row, toIndex: to.row)
     }
     
 
