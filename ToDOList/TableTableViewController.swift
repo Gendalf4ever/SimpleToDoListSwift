@@ -22,9 +22,25 @@ class TableTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    @IBAction func pushEditAction(_ sender: Any) {
+        tableView.setEditing(true, animated: true)
+    }
     @IBAction func pushAddAction(_ sender: Any) {
-        addItem(itemName: "New Item")
-        tableView.reloadData()
+        let alertController = UIAlertController(title: "Create new task", message: nil, preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "New task name:"
+        }
+     let alertActionCancel = UIAlertAction(title: "Cancel", style: .default) { (alert) in
+            
+        }
+        let alertActionCreate = UIAlertAction(title: "Create", style: .cancel) { (alert) in
+            let newItem = alertController.textFields![0].text
+            addItem(itemName: newItem!)
+            self.tableView.reloadData()
+           }
+        alertController.addAction(alertActionCancel)
+        alertController.addAction(alertActionCreate)
+        present(alertController, animated: true, completion: nil)
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -84,12 +100,12 @@ class TableTableViewController: UITableViewController {
        
     }
 
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    */
+    
 
     /*
     // Override to support conditional rearranging of the table view.
