@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.63738102519999995" green="0.15897356870000001" blue="0.84818248060000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="mfx-wG-M42" imageView="1pZ-Oo-Xmx" style="IBUITableViewCellStyleDefault" id="rbn-hu-jhe">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -25,14 +26,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mfx-wG-M42">
-                                            <rect key="frame" x="69" y="0.0" width="325" height="43.5"/>
+                                            <rect key="frame" x="79" y="0.0" width="315" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="uncheck" id="1pZ-Oo-Xmx">
-                                            <rect key="frame" x="20" y="0.0" width="34" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="44" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -47,11 +48,13 @@
                     <navigationItem key="navigationItem" title="ToDo List" id="n9b-tZ-CDs">
                         <rightBarButtonItems>
                             <barButtonItem style="done" systemItem="add" id="9pP-wT-toY">
+                                <color key="tintColor" red="0.63738102519999995" green="0.15897356870000001" blue="0.84818248060000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="pushAddAction:" destination="tjC-Pc-XR2" id="ccm-I7-LOb"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="edit" id="rcN-6x-Ok7">
+                                <color key="tintColor" red="0.63738102519999995" green="0.15897356870000001" blue="0.84818248060000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="pushEditAction:" destination="tjC-Pc-XR2" id="VXE-a1-VaK"/>
                                 </connections>
@@ -83,7 +86,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="uncheck" width="380" height="492"/>
+        <image name="uncheck" width="765.5" height="765.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
