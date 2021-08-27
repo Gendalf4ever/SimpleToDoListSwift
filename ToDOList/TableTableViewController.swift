@@ -24,6 +24,9 @@ class TableTableViewController: UITableViewController {
 
     @IBAction func pushEditAction(_ sender: Any) {
         tableView.setEditing(!tableView.isEditing, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+            self.tableView.reloadData()
+        })
     }
     @IBAction func pushAddAction(_ sender: Any) {
         let alertController = UIAlertController(title: "Create new task", message: nil, preferredStyle: .alert)
@@ -63,6 +66,15 @@ class TableTableViewController: UITableViewController {
         } else {
             cell.imageView?.image = UIImage(named: "uncheck.png")
         }
+     
+        if tableView.isEditing {
+            cell.textLabel?.alpha = 0.4
+            cell.imageView?.alpha = 0.4
+        } else {
+            cell.textLabel?.alpha = 1
+            cell.imageView?.alpha = 1
+        }
+        
         return cell
     }
     
@@ -107,7 +119,18 @@ class TableTableViewController: UITableViewController {
         moveItem(fromIndex: fromIndexPath.row, toIndex: to.row)
     }
     
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if tableView.isEditing {
+            return .none
+        }
+        return .delete
+    }
 
+    
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
