@@ -37,9 +37,13 @@ class TableTableViewController: UITableViewController {
      let alertActionCancel = UIAlertAction(title: "Cancel", style: .default) { (alert) in
             
         }
+        
+//        Новая запись
         let alertActionCreate = UIAlertAction(title: "Create", style: .cancel) { (alert) in
             let newItem = alertController.textFields![0].text
-            addItem(itemName: newItem!)
+            if newItem != "" {
+                addItem(itemName: newItem!)
+            }
             self.tableView.reloadData()
            }
         alertController.addAction(alertActionCancel)

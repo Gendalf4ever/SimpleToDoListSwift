@@ -8,7 +8,7 @@
 
 import Foundation
 import UserNotifications
-
+import UIKit
 var ToDoItems: [[String: Any]] {
     set {
         UserDefaults.standard.set(newValue, forKey: "ToDoDataKey")
@@ -33,16 +33,16 @@ func moveItem(fromIndex: Int, toIndex: Int) {
 
 func addItem(itemName:String, isCompleted: Bool = false){
     ToDoItems.append(["Name": itemName, "isCompleted": false])
-  
+    setBadge()
 }
 func changeState (at item: Int) -> Bool{
     ToDoItems[item]["isCompleted"] =  !(ToDoItems[item]["isCompleted"] as! Bool)
-
+    setBadge()
     return  ToDoItems[item]["isCompleted"] as! Bool
 }
 func removeItem(at index: Int) {
     ToDoItems.remove(at: index)
-
+    setBadge()
 }
 
 func requestForNotification(){
@@ -53,4 +53,14 @@ func requestForNotification(){
             print("Несогласие")
         }
     }
+}
+
+func setBadge(){
+    var badgeNumber = 0
+    for item in ToDoItems {
+        if (item["isCompleted"] as? Bool) == false {
+            badgeNumber = badgeNumber + 1
+        }
+    }
+    UIApplication.shared.applicationIconBadgeNumber = badgeNumber
 }
