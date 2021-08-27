@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UserNotifications
 
 var ToDoItems: [[String: Any]] {
     set {
@@ -45,3 +45,12 @@ func removeItem(at index: Int) {
 
 }
 
+func requestForNotification(){
+    UNUserNotificationCenter.current().requestAuthorization(options: [.badge]) { (isEnabled, error) in
+        if isEnabled {
+            print("Согласие")
+        } else {
+            print("Несогласие")
+        }
+    }
+}
